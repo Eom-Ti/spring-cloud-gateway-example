@@ -13,4 +13,5 @@ include(
         ':order-server',
         ':item-server'
 )
+include 'order-server'
 
