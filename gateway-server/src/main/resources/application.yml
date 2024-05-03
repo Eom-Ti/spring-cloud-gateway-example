@@ -5,8 +5,16 @@ spring:
   cloud:
     gateway:
       mvc:
-        routes:
-          - id: item-server
+        routesMap:
+          item-server:
             uri: http://localhost:8081
             predicates:
               - Path=/item-api/**
+          order-server:
+            uri: http://localhost:8082
+            predicates:
+              - Path=/order-api/**
+          user-server:
+            uri: http://localhost:8083
+            predicates:
+              - Path=/user-api/**
